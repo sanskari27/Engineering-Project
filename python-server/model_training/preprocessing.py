@@ -8,11 +8,10 @@ from sklearn.model_selection import train_test_split
 class Preprocessing:
 
     def __new__(cls, filepath: str):
-        instance_name = "instance_" + filepath
-        if not hasattr(cls, instance_name):
-            cls[instance_name] = super().__new__(cls)
-            cls[instance_name].__init(filepath)
-        return cls[instance_name]
+        if not hasattr(cls, "instance"):
+            cls.instance = super().__new__(cls)
+            cls.instance.__init__(filepath)
+        return cls.instance
 
     @staticmethod
     def get_instance(filepath: str):
