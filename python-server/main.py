@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from api import routers
 from model_training import NaiveBayes, Preprocessing, RandomForestModel
+from fastapi.middleware.cors import CORSMiddleware
 
 RFM_MODEL = "./models/rfc.sav"
 NAIVE_BAYES_MODEL = "./models/naive_bayes.sav"
@@ -12,6 +13,19 @@ DATASET_PATH = "./dataset/crop_recommendation.csv"
 
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(routers.router)
 
@@ -48,7 +62,7 @@ def main():
 
 
 def start_server():
-    uvicorn.run(app, host="0.0.0.0", port=8282)
+    uvicorn.run(app, host="0.0.0.0", port=7788)
 
 
 if __name__ == "__main__":

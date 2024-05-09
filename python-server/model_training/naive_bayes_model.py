@@ -25,6 +25,7 @@ class NaiveBayes:
         self.model.fit(x_train, y_train)
 
     def save_model(self, filepath: str):
+        print("Model saved")
         pickle.dump(self.model, open(filepath, "wb"))
 
     def load_model(self, filename):
