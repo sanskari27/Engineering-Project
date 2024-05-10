@@ -6,7 +6,6 @@ import {
 	Flex,
 	Grid,
 	GridItem,
-	Heading,
 	Input,
 	InputGroup,
 	InputRightAddon,
@@ -57,10 +56,15 @@ export default function PredictPage() {
 	};
 
 	return (
-		<Center width={'100vw'} minH={'100vh'} flexDirection={'column'} className='bg-zinc-100'>
-			<Heading mb={'1rem'} bgGradient='linear(to-r,#CA835B, #F4A15D, #CA835B)' bgClip='text'>
+		<Center width={'100vw'} minH={'100vh'} flexDirection={'column'} className='bg-zinc-100 '>
+			<Text
+				className='font-bold text-xl md:text-4xl md:font-extrabold'
+				mb={'1rem'}
+				bgGradient='linear(to-r,#CA835B, #F4A15D, #CA835B)'
+				bgClip='text'
+			>
 				Crop Recommendation System
-			</Heading>
+			</Text>
 			<Box width={'fit-content'}>
 				<form onSubmit={handleSubmit(onSubmit)} className='p-4 bg-white rounded-2xl'>
 					<Grid className='grid-cols-1 md:grid-cols-3' columnGap={'2rem'} rowGap={'1rem'}>
