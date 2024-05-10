@@ -29,7 +29,7 @@ export default function ContributePage() {
 
 	const onSubmit = async (data: object) => {
 		try {
-			const res = await fetch('http://localhost:7788/add-to-dataset', {
+			const res = await fetch('http://178.16.138.2:7788/add-to-dataset', {
 				method: 'POST',
 				mode: 'cors', // no-cors, *cors, same-origin
 				cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
