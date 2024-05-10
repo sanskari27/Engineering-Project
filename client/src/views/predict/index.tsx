@@ -62,6 +62,7 @@ export default function PredictPage() {
 				mb={'1rem'}
 				bgGradient='linear(to-r,#CA835B, #F4A15D, #CA835B)'
 				bgClip='text'
+				textAlign={'center'}
 			>
 				Crop Recommendation System
 			</Text>
