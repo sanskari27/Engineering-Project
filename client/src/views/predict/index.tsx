@@ -65,7 +65,7 @@ export default function PredictPage() {
 				<form onSubmit={handleSubmit(onSubmit)} className='p-4 bg-white rounded-2xl'>
 					<Grid className='grid-cols-1 md:grid-cols-3' columnGap={'2rem'} rowGap={'1rem'}>
 						<GridItem>
-							<Text mb='8px'>Ration of Nitrogen content in soil</Text>
+							<Text mb='8px'>Ratio of Nitrogen content in soil</Text>
 							<Input
 								id='n'
 								width={'full'}
@@ -78,7 +78,7 @@ export default function PredictPage() {
 						</GridItem>
 
 						<GridItem>
-							<Text mb='8px'>Ration of Phosphorous content in soil</Text>
+							<Text mb='8px'>Ratio of Phosphorous content in soil</Text>
 							<Input
 								id='p'
 								width={'full'}
@@ -91,7 +91,7 @@ export default function PredictPage() {
 						</GridItem>
 
 						<GridItem>
-							<Text mb='8px'>Ration of Potassium content in soil</Text>
+							<Text mb='8px'>Ratio of Potassium content in soil</Text>
 							<Input
 								id='k'
 								width={'full'}
